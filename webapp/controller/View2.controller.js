@@ -398,7 +398,8 @@ sap.ui.define([
 
                 var payload = {
                     "Pafno": "",
-                    "Action": "REJECT"
+                    "Action": "REJECT",
+                    "NAV_NSH_ITEM_PRODUCT": []
                 }
                 this._sendPayload(payload, "Rejected");
 
@@ -449,7 +450,8 @@ sap.ui.define([
 
                 var payload = {
                     "Pafno": "",
-                    "Action": "ACCEPT"
+                    "Action": "ACCEPT",
+                    "NAV_NSH_ITEM_PRODUCT": []
                 }
                 this._sendPayload(payload, "Approved");
             },
@@ -457,7 +459,7 @@ sap.ui.define([
             _sendPayload: function (payload, sAction) {
 
                 payload.Pafno = this.getView().getModel("oRequestModel").getData().Pafno;
-
+                payload.NAV_NSH_ITEM_PRODUCT = this.getView().getModel("ProductModel").getData();
 
                 this.getView().setBusy(true);
                 this.getOwnerComponent().getModel().create('/ZPAF_ED_HEADERSet', payload, {

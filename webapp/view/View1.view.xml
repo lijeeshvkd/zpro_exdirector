@@ -262,77 +262,77 @@
     </ui:title>
 
     <ui:columns>
-        <ui:Column id="Pafno" width="4rem" hAlign="End" sortProperty="Pafno" >
+        <ui:Column id="Pafno" hAlign="End" sortProperty="Pafno" >
             <Label text="PAF No" wrapping="true"/>
             <ui:template>
                 <Text text="{path:'JSONModelForTable>Pafno', formatter:'.formatter.removeLeadingZeros'}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column width="5rem" hAlign="End">
+        <ui:Column hAlign="End">
             <Label text="Vertical"/>
             <ui:template>
                 <Text text="{path:'JSONModelForTable>Spart' , formatter: '.formatter.getVertical'}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column id="Soname" width="5rem" hAlign="Center">
+        <ui:Column id="Soname" hAlign="Center">
             <Label text="Sales Office"/>
             <ui:template>
                 <Text text="{JSONModelForTable>Soname}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column id="Name" width="14rem" hAlign="Center">
+        <ui:Column id="Name" hAlign="Center">
             <Label text="Customer"/>
             <ui:template>
                 <Text text="{JSONModelForTable>Name}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column id="Kunnr" width="6rem" hAlign="Center">
+        <ui:Column id="Kunnr" hAlign="Center">
             <Label text="Customer ID"/>
             <ui:template>
                 <Text text="{JSONModelForTable>Kunnr}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column width="6rem" hAlign="Center">
+        <ui:Column hAlign="Center">
             <Label text="Order type"/>
             <ui:template>
                 <Text text="{ parts: ['JSONModelForTable>Vtweg'], formatter: '.formatter.getOrderType' }"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column width="6rem" hAlign="End">
+        <ui:Column hAlign="End">
             <Label text="Total Order"/>
             <ui:template>
                 <Text text="{JSONModelForTable>WtotalVol}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column width="6rem" hAlign="End">
+        <ui:Column hAlign="End">
             <Label text="Current Order"/>
             <ui:template>
                 <Text text="{JSONModelForTable>WcurVolFt}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column id="Erdat" width="6rem" hAlign="Center" sortProperty="Erdat">
+        <ui:Column id="Erdat" hAlign="Center" sortProperty="Erdat">
             <Label text="Request Date"/>
             <ui:template>
                 <Text text="{ parts: ['JSONModelForTable>Erdat'], formatter: '.formatter.getFormattedDate' }"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column id="Validity" width="6rem" hAlign="End">
+        <ui:Column id="Validity" hAlign="End">
             <Label text="Validity"/>
             <ui:template>
                 <Text text="{path:'JSONModelForTable>Validity', formatter:'.formatter.removeLeadingZeros'}"/>
             </ui:template>
         </ui:Column>
 
-        <ui:Column width="6rem" hAlign="End">
+        <ui:Column hAlign="End">
             <Label text="GM%"/>
             <ui:template>
                 <tnt:InfoLabel
@@ -343,7 +343,7 @@
             </ui:template>
         </ui:Column>
 
-        <ui:Column width="6rem" hAlign="Center">
+        <ui:Column hAlign="Center">
             <Label text="Status"/>
             <ui:template>
                 <tnt:InfoLabel
