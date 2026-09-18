@@ -110,11 +110,11 @@ sap.ui.define([
             },
             _onRouteMatched: function (oEvent) {
 
-                var sID = oEvent.getParameter("arguments").ID;
-                if (sID === "Page1" || sID === undefined || sID === "") {
-                    this.onFilterBarClear();
-                    this.onSearch();
-                }
+                // var sID = oEvent.getParameter("arguments").ID;
+                // if (sID === "Page1" || sID === undefined || sID === "") {
+                //     this.onFilterBarClear();
+                //     this.onSearch();
+                // }
             },
             _getRequestData: function (sStatusText, sForWhat) {
 
