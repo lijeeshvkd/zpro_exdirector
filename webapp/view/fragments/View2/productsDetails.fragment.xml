@@ -10,7 +10,7 @@
                 </Toolbar>
             </headerToolbar>
             <columns>
-                <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" width="8rem">
+                <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center" width="6rem">
                     <Text text="Material Freight Groups" />
                 </Column>
                 <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
@@ -69,12 +69,10 @@
                     <Text text="Min Bill Price-L3M_Region" />
                 </Column>
 
-                <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                    <Text text="Freight" />
-                </Column>
                 <!-- <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-                    <Text text="Revised freight" />
+                    <Text text="Freight" />
                 </Column> -->
+                
                 <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                     <Text text="Discount" />
                 </Column>
@@ -84,30 +82,29 @@
                 <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" width="8rem">
                     <Text text="SVC/BP(Sqft)" />
                 </Column>
-                <!-- <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
-                    <Text text="BP Remarks" />
-                </Column> -->
+
                 <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="false">
                     <Text text="Gross Margin" />
                 </Column>
                 <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" visible="false">
                     <Text text="Volume(Sqft In Lakhs)" />
                 </Column>
-                <!-- <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
-                    <Text text="Revised BP(Sqft)" />
-                </Column> -->
+
                 <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
                     <Text text="Gross Margin(%)" />
                 </Column>
-                <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
-                    <Text text="Remarks" />
-                </Column>
-                <!-- Start: Remarkcol001 -->
+
                 <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
                     <Text text="PMG Remarks" />
                 </Column>
-                <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" width="8rem" >
+                <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
                     <Text text="NSH Remarks" />
+                </Column>
+                <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+                    <Text text="DH Remarks" />
+                </Column>
+                <Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center" width="8rem" >
+                    <Text text="ED Remarks" />
                 </Column>
                 <!-- End: Remarkcol001 -->
             </columns>
@@ -120,19 +117,9 @@
                         <Text text="{ProductModel>Szcm}" />
                         <Text text="{ProductModel>Design}" />
 
-                        <!-- <Text text="{ProductModel>Sname}" />
-                        <Text
-                            visible="false"
-                            text="{ProductModel>Volume}"
-                        />
-                        <Text text="{ProductModel>Frghtsqft}" />
-                        <Text text="{ProductModel>ApprovedFrightprice}" /> -->
-
                         <Text visible="{=${oRequestModel>/Vtweg} === '15' || ${oRequestModel>/Vtweg} === '19' || ${oRequestModel>/Vtweg} === '25' || ${oRequestModel>/Vtweg} === '29'  ? true: false}" text="{ProductModel>Commboxp}" />
                         <Text visible="{=${oRequestModel>/Vtweg} === '15' || ${oRequestModel>/Vtweg} === '19' || ${oRequestModel>/Vtweg} === '25' || ${oRequestModel>/Vtweg} === '29'  ? false: true}" text="{ProductModel>Commbox}" />
 
-                        <!-- <Text text="{parts:['ProductModel>Discount', 'ProductModel>Discountb'], formatter:'.formatter.getDiscount' }" /> -->
-                        <!-- <Text text="{ProductModel>Discount}" /> -->
                         <Text text="{ProductModel>Zzprodh4}" />
                         <Text text="{ProductModel>Mvgr5}" />
                         <Text text="{ProductModel>Totalvolume}" />
@@ -145,32 +132,21 @@
                         <Text text="{ProductModel>LastBill}" />
                         <Text text="{ProductModel>MinBill}" />
 
-                        <Text text="{ProductModel>Frghtsqft}" />
+                        <!-- <Text text="{ProductModel>Frghtsqft}" /> -->
                         <Text text="{parts:['ProductModel>Discount', 'ProductModel>Discountb'], formatter:'.formatter.getDiscount' }" />
                         <Text text="{ProductModel>Netexsqft}" />
                         <Text text="{ProductModel>Buyingpricesqft}" />
-                        <!-- <Text text="{ProductModel>Remark}" />
-                        <Text
-                            visible="false"
-                            text="{ProductModel>Grossmarg}"
-                        />
-                        <Text
-                            visible="false"
-                            text="{ProductModel>Zvolumepft}"
-                        />
-                        <Text
-                            text="{path:'ProductModel>ApprovedBuyingprice'}"
-                        /> -->
+                    
                         <Text visible="false" text="{ProductModel>Grossmarg}" />
                         <Text visible="false" text="{ProductModel>Zvolumepft}" />
                         <Text text="{path:'ProductModel>Grossmargper'}" />
-                        <Text text="{path:'ProductModel>Sbremark'}" />
-                        <!-- Start: Remarkcol001 -->
-                        <!-- <Text text="{path:'ProductModel>Premark'}" /> -->
+                        
                         <Text text="{path:'ProductModel>PmgRemarks'}" />
-                        <TextArea value="{ProductModel>DhRemarkItem}" liveChange="onSbremarkTextAreaLiveChange"
+                        <Text text="{path:'ProductModel>NshRemarks'}" />
+                        <Text text="{path:'ProductModel>DhRemarks'}" />
+                        <TextArea value="{ProductModel>EdRemarkItem}" liveChange="onSbremarkTextAreaLiveChange"
                             editable="{= ${oRequestModel>/Status} === 'P' }" />
-                        <!-- End: Remarkcol001 -->
+                        
                     </cells>
                 </ColumnListItem>
             </items>
